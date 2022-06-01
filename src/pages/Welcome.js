@@ -1,13 +1,12 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Welcome = () => {
   return (
     <section>
       <h1>The Welcome Page</h1>
       <Link to="new-user">New User</Link>
-      <Routes>
-        <Route path="new-user" element={<p>Welcome, new user!</p>} />
-      </Routes>
+      {/*let React Know where the nested route should be */}
+      <Outlet />
     </section>
   );
 };
