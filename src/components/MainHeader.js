@@ -16,7 +16,10 @@ const MainHeader = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className={classes.active} to="/products">
+            <NavLink
+              className={(navData) => (navData.isActive ? classes.active : "")}
+              to="/products"
+            >
               Products
             </NavLink>
           </li>
